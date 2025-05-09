@@ -2,79 +2,59 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skrydis – Titulinis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skrydis – Pradžia</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(120deg, #a18cd1, #fbc2eb);
-      min-height: 100vh;
+      background: linear-gradient(120deg, #6a11cb, #2575fc);
+      color: white;
+      margin: 0;
+      padding: 40px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
-      color: #333;
     }
 
     h1 {
       font-size: 3em;
-      margin-bottom: 10px;
-      color: #fff;
+      margin-bottom: 20px;
     }
 
-    nav {
-      margin-bottom: 40px;
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
     }
 
-    nav a {
-      margin: 0 15px;
-      padding: 10px 20px;
+    a {
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 15px 25px;
+      border-radius: 10px;
       text-decoration: none;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 8px;
-      color: #333;
+      color: #fff;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.2s;
     }
 
-    nav a:hover {
-      background-color: #fff;
-    }
-
-    .card {
-      background-color: #fff;
-      border-radius: 16px;
-      padding: 25px;
-      margin: 15px;
-      max-width: 600px;
-      width: 100%;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .card h2 {
-      margin-bottom: 10px;
-      font-size: 1.5em;
-    }
-
-    .card p {
-      line-height: 1.6;
+    a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
     }
 
     footer {
-      margin-top: 40px;
-      color: #eee;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #ddd;
     }
   </style>
 </head>
 <body>
 
-  <h1>Skrydis</h1>
+  <h1>🎬 Sveiki atvykę į Skrydį!</h1>
+  <p>Naršyk įvairias mūsų svetainės dalis:</p>
 
   <div class="links">
     <a href="youtube.html">YouTube</a>
@@ -89,16 +69,6 @@
     <a href="statistika.html">Statistika</a>
     <a href="planai.html">Planai</a>
     <a href="admin.html">Admin zona</a>
-  </div>
-
-  <div class="card">
-    <h2>🎬 Naujausi vaizdo įrašai</h2>
-    <p>Apsilankyk mūsų YouTube ar Medal.tv skiltyje ir peržiūrėk naujausius klipus iš mūsų žaidimų ar veiklų.</p>
-  </div>
-
-  <div class="card">
-    <h2>ℹ️ Apie projektą</h2>
-    <p>„Skrydis“ – tai mūsų bendruomenės svetainė, kurioje dalinamės klipais, naujienomis ir atnaujinimais. Prisijunk prie mūsų kelionės!</p>
   </div>
 
   <footer>

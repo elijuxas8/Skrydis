@@ -2,27 +2,79 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skrydis – Titulinis</title>
   <style>
-    body { font-family: Arial; padding: 20px; background: #f0f0f0; }
-    h1 { color: #333; }
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #0066cc;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .box {
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #a18cd1, #fbc2eb);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    nav {
+      margin-bottom: 40px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      color: #333;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #fff;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 25px;
+      margin: 15px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+
+    .card p {
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #eee;
     }
   </style>
 </head>
 <body>
 
-  <h1>Sveiki atvykę į „Skrydis“</h1>
+  <h1>Skrydis</h1>
 
   <nav>
     <a href="youtube.html">YouTube</a>
@@ -31,15 +83,19 @@
     <a href="naujienos.html">Naujienos</a>
   </nav>
 
-  <div class="box">
-    <h2>Naujausi įvykiai</h2>
-    <p>Pridėtos klipų skiltys, dabar galite peržiūrėti mūsų vaizdo įrašus!</p>
+  <div class="card">
+    <h2>🎬 Naujausi vaizdo įrašai</h2>
+    <p>Apsilankyk mūsų YouTube ar Medal.tv skiltyje ir peržiūrėk naujausius klipus iš mūsų žaidimų ar veiklų.</p>
   </div>
 
-  <div class="box">
-    <h2>Kas tai per projektas?</h2>
-    <p>„Skrydis“ – tai vieta, kur talpinami mūsų vaizdo įrašai, klipai ir naujienos.</p>
+  <div class="card">
+    <h2>ℹ️ Apie projektą</h2>
+    <p>„Skrydis“ – tai mūsų bendruomenės svetainė, kurioje dalinamės klipais, naujienomis ir atnaujinimais. Prisijunk prie mūsų kelionės!</p>
   </div>
+
+  <footer>
+    &copy; 2025 Skrydis. Visos teisės saugomos.
+  </footer>
 
 </body>
 </html>

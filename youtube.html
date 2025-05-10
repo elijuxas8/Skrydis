@@ -40,71 +40,81 @@
       font-size: 0.9em;
       color: #ddd;
     }
+    .content {
+      max-width: 800px;
+      width: 90%;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
     .video-grid {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
-      justify-content: center;
+      width: 100%;
+      max-width: 1000px;
     }
     .video-card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
       padding: 15px;
-      width: 320px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
-    .video-card:hover {
-      transform: scale(1.03);
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
     .video-card iframe {
       width: 100%;
-      height: 180px;
-      border-radius: 10px;
+      height: 200px;
+      border-radius: 8px;
     }
     .video-title {
-      margin-top: 10px;
+      margin: 10px 0;
       font-weight: bold;
-      text-align: center;
-      color: white;
     }
     .watch-fullscreen-btn {
-      display: block;
-      margin: 10px auto 0 auto;
-      padding: 6px 12px;
+      background-color: #ffffff33;
+      color: #fff;
       border: none;
-      background-color: #4a6cff;
-      color: white;
-      border-radius: 8px;
+      padding: 8px 12px;
+      border-radius: 6px;
       cursor: pointer;
-      font-weight: bold;
       transition: background 0.3s;
     }
     .watch-fullscreen-btn:hover {
-      background-color: #364fd4;
+      background-color: #ffffff55;
     }
     .modal {
       display: none;
       position: fixed;
       z-index: 1000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
       justify-content: center;
       align-items: center;
     }
     .modal-content {
-      width: 90%; max-width: 900px; height: 90%;
+      position: relative;
+      width: 80%;
+      max-width: 900px;
     }
     .modal-content iframe {
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 500px;
     }
-    .modal-close {
+    .close-btn {
       position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 30px;
-      color: white;
+      top: -10px;
+      right: -10px;
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
       cursor: pointer;
     }
   </style>
@@ -132,13 +142,41 @@
       <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/G2q2gC0xnnE')">Žiūrėti visame lange</button>
     </div>
 
-    <!-- Kiti video taip pat gali turėti mygtuką jei reikia -->
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/OSLSNZZAwmo" title="YouTube Video 1" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Stream Savaitė | Kaimux | 2 diena | BoxPVP | Nepatinka boxas jau😖</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/OSLSNZZAwmo')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/YtwHw9X1ITc" title="YouTube Video 1" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Stream Savaitė | Kaimux | 1 diena | Prison | Pilną sunkumų ten.......</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/YtwHw9X1ITc')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/5MCSfNiKcvs" title="YouTube Video 1" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Kaip pasiekti viską per vieną kart?! | EFT5HMP.</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/5MCSfNiKcvs')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/ZPVp2mzGMEE" title="YouTube Video 1" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Ice age tutorial PS4</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/ZPVp2mzGMEE')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/qr9puiMdwI4" title="YouTube Video 2" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Stray žaidimas VISAS | Tutorial</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/qr9puiMdwI4')">Žiūrėti visame lange</button>
+    </div>
   </div>
 
-  <div id="videoModal" class="modal" onclick="closeModal(event)">
-    <div class="modal-close">&times;</div>
+  <div id="videoModal" class="modal">
     <div class="modal-content">
-      <iframe id="modalIframe" src="" frameborder="0" allowfullscreen></iframe>
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      <iframe id="modalVideo" src="" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -147,21 +185,16 @@
   </footer>
 
   <script>
-    function openModal(url) {
-      const modal = document.getElementById("videoModal");
-      const iframe = document.getElementById("modalIframe");
-      iframe.src = url + "?autoplay=1";
-      modal.style.display = "flex";
+    function openModal(videoUrl) {
+      document.getElementById("modalVideo").src = videoUrl + "?autoplay=1";
+      document.getElementById("videoModal").style.display = "flex";
     }
 
-    function closeModal(event) {
-      const modal = document.getElementById("videoModal");
-      const iframe = document.getElementById("modalIframe");
-      if (event.target.classList.contains('modal') || event.target.classList.contains('modal-close')) {
-        iframe.src = "";
-        modal.style.display = "none";
-      }
+    function closeModal() {
+      document.getElementById("modalVideo").src = "";
+      document.getElementById("videoModal").style.display = "none";
     }
   </script>
+
 </body>
 </html>

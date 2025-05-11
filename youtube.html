@@ -40,14 +40,6 @@
       font-size: 0.9em;
       color: #ddd;
     }
-    .content {
-      max-width: 800px;
-      width: 90%;
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -125,8 +117,6 @@
     <a href="medal.html">Medal</a>
     <a href="naujienos.html">Naujienos</a>
     <a href="info.html">Informacija</a>
-    <a href="zaidimai.html">Žaidimai</a>
-    <a href="zaidimai_testai.html">Testai</a>
     <a href="komanda.html">Komanda</a>
     <a href="atsiliepimai.html">Atsiliepimai</a>
     <a href="archyvas.html">Archyvas</a>
@@ -136,6 +126,12 @@
   </nav>
 
   <div class="video-grid">
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/CZCpEGY5Vjk" title="Minecraft išlikimas | 2 dalis" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Minecraft išlikimas | 2 dalis | Turim ir ūkį😀</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/CZCpEGY5Vjk')">Žiūrėti visame lange</button>
+    </div>
+
     <div class="video-card">
       <iframe src="https://www.youtube.com/embed/XJ9UWG9Xiew" title="Minecraft išlikimas | 1 dalis" frameborder="0" allowfullscreen></iframe>
       <div class="video-title">Minecraft išlikimas | 1 dalis | Pati pirma pradžia 😎</div>

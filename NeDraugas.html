@@ -2,42 +2,42 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
+  <title>NeDraugas | Skrydis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NeDraugas – Profilis</title>
   <style>
     body {
       margin: 0;
-      background-color: #842e2e;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      padding: 0;
+      background: #771f1f;
       overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    .snow {
+    .snowflake {
       position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: url('https://i.imgur.com/Fa0rM9f.png'); /* Replace with actual snow particle */
-      pointer-events: none;
-      animation: snow 10s linear infinite;
+      top: -10px;
+      color: white;
+      font-size: 1em;
+      user-select: none;
+      animation: fall linear infinite;
     }
 
-    @keyframes snow {
-      0% { background-position: 0 0; }
-      100% { background-position: 0 100%; }
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
     }
 
     .card {
-      background: linear-gradient(to bottom right, #6a11cb, #9c27b0);
-      padding: 30px;
+      background: linear-gradient(to bottom right, #5e4db2, #a76de4);
+      width: 400px;
+      margin: 80px auto;
       border-radius: 20px;
       text-align: center;
+      padding: 30px;
       color: white;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      width: 350px;
+      position: relative;
+      z-index: 1;
     }
 
     .avatar {
@@ -45,7 +45,8 @@
       height: 100px;
       border-radius: 50%;
       margin-bottom: 15px;
-      background: url('0e3b047d-5bbe-4227-8369-1b5c72b8c751.png') center/cover no-repeat;
+      border: 4px solid white;
+      background: url('paveiksliukas.png') center/cover no-repeat;
       display: inline-block;
     }
 
@@ -55,83 +56,87 @@
       color: orange;
     }
 
-    .subtitle {
-      font-size: 16px;
-      color: #ddd;
-      margin-top: 5px;
+    .status {
+      font-size: 18px;
+      color: #eee;
+      margin: 6px 0;
     }
 
     .location {
       font-size: 14px;
-      margin: 10px 0;
+      color: #ccc;
     }
 
-    .status-card {
-      background-color: rgba(255,255,255,0.1);
-      padding: 10px;
+    .profile-box {
+      background: rgba(255,255,255,0.15);
+      padding: 15px;
       border-radius: 12px;
       margin-top: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      gap: 10px;
     }
 
-    .small-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: url('0e3b047d-5bbe-4227-8369-1b5c72b8c751.png') center/cover no-repeat;
+    .profile-box .username {
+      font-weight: bold;
     }
 
-    .status-text {
-      font-size: 14px;
-      color: #ddd;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: red;
-      display: inline-block;
-    }
-
-    .socials {
+    .social-icons {
       margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
     }
 
-    .socials img {
-      width: 24px;
+    .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 24px;
+      color: white;
       opacity: 0.7;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      opacity: 1;
+    }
+
+    .views {
+      font-size: 14px;
+      opacity: 0.5;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="snow"></div>
 
+  <!-- SNOW EFFECT -->
+  <script>
+    const snowCount = 30;
+    for (let i = 0; i < snowCount; i++) {
+      const snow = document.createElement('div');
+      snow.className = 'snowflake';
+      snow.style.left = Math.random() * 100 + 'vw';
+      snow.style.animationDuration = (3 + Math.random() * 5) + 's';
+      snow.innerText = '❄';
+      document.body.appendChild(snow);
+    }
+  </script>
+
+  <!-- CARD -->
   <div class="card">
     <div class="avatar"></div>
     <div class="name">NeDraugas</div>
-    <div class="subtitle">Labas, Netrugdom</div>
+    <div class="status">Labas, Netrugdom</div>
     <div class="location">📍 Lietuva</div>
 
-    <div class="status-card">
-      <div class="small-avatar"></div>
-      <div>
-        <div><strong>nedraugas_</strong> <span class="dot"></span></div>
-        <div class="status-text">currently doing nothing</div>
-      </div>
+    <div class="profile-box">
+      <div class="username">nedraugas_ 🔴</div>
+      <div class="status-text">currently doing nothing</div>
     </div>
 
-    <div class="socials">
-      <img src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="YouTube">
-      <img src="https://img.icons8.com/ios-filled/50/discord-logo.png" alt="Discord">
-      <img src="https://img.icons8.com/ios-filled/50/internet.png" alt="Other">
+    <div class="social-icons">
+      <a href="https://www.youtube.com/@NeDraugas8" target="_blank">📺</a>
+      <a href="https://discord.gg/zDtMX7qKhU" target="_blank">💬</a>
+      <a href="https://guns.lol/NeDraugas" target="_blank">🪄</a>
     </div>
+
+    <div class="views">👁 25</div>
   </div>
+
 </body>
 </html>

@@ -47,7 +47,6 @@
       margin-bottom: 15px;
       border: 4px solid white;
       background: url('https://cdn.discordapp.com/avatars/1294598723594354716/6abf47a11a4fcc9149ceafa8b540b47a.webp') center/cover no-repeat;
-      https://cdn.discordapp.com/badge-icons/011940fd013da3f7fb926e4a1cd2e618.png
       display: inline-block;
     }
 
@@ -59,6 +58,17 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: gradientText 10s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
     }
 
     @keyframes gradientText {
@@ -131,13 +141,17 @@
   <!-- CARD -->
   <div class="card">
     <div class="avatar"></div>
-    <div class="name">NeDraugas</div>
+    <div class="name">
+      NeDraugas
+      <img class="badge" src="https://cdn.discordapp.com/badge-icons/011940fd013da3f7fb926e4a1cd2e618.png" alt="Active Developer">
+      <img class="badge" src="https://cdn.discordapp.com/badge-icons/0f35d2cfa5d0c4e04b8c06a444ebba4e.png" alt="HypeSquad">
+    </div>
     <div class="status">Labas, Netrugdom</div>
     <div class="location">📍 Lietuva</div>
 
     <div class="profile-box">
       <div class="username">nedraugas_</div>
-      <div class="status-text">Nedtrugdyti (režimas)</div>
+      <div class="status-text">Netrugdom...</div>
     </div>
 
     <div class="social-icons">

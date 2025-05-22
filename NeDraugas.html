@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skrydis – Informacija</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #7b2c2c; /* Tamsiai raudonas fonas */
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .snowflake {
+      position: absolute;
+      color: #ddd;
+      font-size: 16px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10px); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    .center-card {
+      max-width: 480px;
+      background: linear-gradient(145deg, #5e3f94, #8e5ec9);
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: #ffc107;
+    }
+
+    .location {
+      font-size: 1em;
+      opacity: 0.8;
+    }
+
+    .info-box {
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    nav {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    nav a {
+      margin: 0 10px;
+      padding: 10px 16px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Pradžia</a>
+    <a href="youtube.html">YouTube</a>
+    <a href="naujienos.html">Naujienos</a>
+    <a href="komanda.html">Komanda</a>
+  </nav>
+
+  <div class="center-card">
+    <h1>Skrydis</h1>
+    <p class="location">Lietuva – žaidimų bendruomenė</p>
+    <div class="info-box">
+      <p><strong>„Skrydis“</strong> – tai bendruomenės projektas, kuriame dalijamės žaidimų klipais, pasiekimais bei atnaujinimais.</p>
+      <p>Šis tinklalapis veikia lokaliai ir yra skirtas žaidimų entuziastams, kurie nori greitai pasiekti naujausią turinį iš mūsų YouTube ir Medal.tv kanalų.</p>
+      <p>Jei turi pasiūlymų ar nori prisidėti, susisiek per Discord ar el. paštu.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Skrydis. Informacija apie projektą.
+  </footer>
+
+  <!-- Papildomi atsitiktiniai sniego taškai -->
+  <script>
+    const snowflakesCount = 30;
+    for (let i = 0; i < snowflakesCount; i++) {
+      const snowflake = document.createElement("div");
+      snowflake.className = "snowflake";
+      snowflake.innerHTML = "*";
+      snowflake.style.left = Math.random() * 100 + "vw";
+      snowflake.style.animationDuration = (Math.random() * 5 + 5) + "s";
+      snowflake.style.fontSize = (Math.random() * 10 + 8) + "px";
+      snowflake.style.opacity = Math.random();
+      document.body.appendChild(snowflake);
+    }
+  </script>
+
+</body>
+</html>

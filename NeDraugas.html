@@ -46,14 +46,24 @@
       border-radius: 50%;
       margin-bottom: 15px;
       border: 4px solid white;
-      background: url('paveiksliukas.png') center/cover no-repeat;
+      background: url('https://cdn.discordapp.com/avatars/1294598723594354716/6abf47a11a4fcc9149ceafa8b540b47a.webp') center/cover no-repeat;
       display: inline-block;
     }
 
     .name {
       font-size: 28px;
       font-weight: bold;
-      color: orange;
+      background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #facc15, #ff6ec4);
+      background-size: 1000% 1000%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 10s ease infinite;
+    }
+
+    @keyframes gradientText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .status {

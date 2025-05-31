@@ -1,227 +1,226 @@
-<!DOCTYPE html>↩
-<html lang="lt">↩
-<head>↩
-  <meta charset="UTF-8">↩
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">↩
-  <title>Youtube</title>↩
-  <style>↩
-    body {↩
-      font-family: 'Segoe UI', sans-serif;↩
-      background: linear-gradient(120deg, #6a11cb, #2575fc);↩
-      min-height: 100vh;↩
-      margin: 0;↩
-      padding: 40px 20px;↩
-      color: white;↩
-      display: flex;↩
-      flex-direction: column;↩
-      align-items: center;↩
-    }↩
-    nav {↩
-      margin-bottom: 30px;↩
-    }↩
-    nav a {↩
-      margin: 0 10px;↩
-      padding: 10px 18px;↩
-      background-color: rgba(255, 255, 255, 0.2);↩
-      border-radius: 8px;↩
-      color: #fff;↩
-      text-decoration: none;↩
-      transition: background 0.3s;↩
-    }↩
-    nav a:hover {↩
-      background-color: rgba(255, 255, 255, 0.4);↩
-    }↩
-    h1 {↩
-      font-size: 2.5em;↩
-      margin-bottom: 20px;↩
-    }↩
-    footer {↩
-      margin-top: 40px;↩
-      font-size: 0.9em;↩
-      color: #ddd;↩
-    }↩
-    .video-grid {↩
-      display: grid;↩
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));↩
-      gap: 20px;↩
-      width: 100%;↩
-      max-width: 1000px;↩
-    }↩
-    .video-card {↩
-      background-color: rgba(255, 255, 255, 0.1);↩
-      border-radius: 10px;↩
-      padding: 15px;↩
-      text-align: center;↩
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);↩
-    }↩
-    .video-card iframe {↩
-      width: 100%;↩
-      height: 200px;↩
-      border-radius: 8px;↩
-    }↩
-    .video-title {↩
-      margin: 10px 0;↩
-      font-weight: bold;↩
-    }↩
-    .watch-fullscreen-btn {↩
-      background-color: #ffffff33;↩
-      color: #fff;↩
-      border: none;↩
-      padding: 8px 12px;↩
-      border-radius: 6px;↩
-      cursor: pointer;↩
-      transition: background 0.3s;↩
-    }↩
-    .watch-fullscreen-btn:hover {↩
-      background-color: #ffffff55;↩
-    }↩
-    .modal {↩
-      display: none;↩
-      position: fixed;↩
-      z-index: 1000;↩
-      left: 0;↩
-      top: 0;↩
-      width: 100%;↩
-      height: 100%;↩
-      background-color: rgba(0, 0, 0, 0.8);↩
-      justify-content: center;↩
-      align-items: center;↩
-    }↩
-    .modal-content {↩
-      position: relative;↩
-      width: 80%;↩
-      max-width: 900px;↩
-    }↩
-    .modal-content iframe {↩
-      width: 100%;↩
-      height: 500px;↩
-    }↩
-    .close-btn {↩
-      position: absolute;↩
-      top: -10px;↩
-      right: -10px;↩
-      background: #fff;↩
-      color: #000;↩
-      border: none;↩
-      border-radius: 50%;↩
-      width: 30px;↩
-      height: 30px;↩
-      font-size: 18px;↩
-      cursor: pointer;↩
-    }↩
-  </style>↩
-</head>↩
-<body>↩
-  <nav>↩
-    <a href="index.html">Pradžia</a>↩
-    <a href="naujienos.html">Naujienos</a>↩
-    <a href="info.html">Informacija</a>↩
-    <a href="komanda.html">Komanda</a>↩
-  </nav>↩
-↩
-    <div class="video-grid">↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/CZCpEGY5Vjk" title="Minecraft išlikimas | 2 dalis" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Minecraft išlikimas | 4 dalis | Kaimeliai!</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/CZCpEGY5Vjk')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-    <div class="video-grid">↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/CZCpEGY5Vjk" title="Minecraft išlikimas | 2 dalis" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Minecraft išlikimas | 3 dalis | Deimantai!</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/oQPZsaJNSKM')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-  <div class="video-grid">↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/CZCpEGY5Vjk" title="Minecraft išlikimas | 2 dalis" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Minecraft išlikimas | 2 dalis | Turim ir ūkį😀</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/CZCpEGY5Vjk')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/XJ9UWG9Xiew" title="Minecraft išlikimas | 1 dalis" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Minecraft išlikimas | 1 dalis | Pati pirma pradžia 😎</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/XJ9UWG9Xiew')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/JgZX1NoHmJs" title="Stream Savaitė 5 diena" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Stream Savaitė | Kaimux | 5 diena | Creative | Va per /blueprints persikelsim</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/JgZX1NoHmJs')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/GU6Qx0Z3zxk" title="Skyblock" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Stream Savaitė | Kaimux | 4 diena | Skyblock | Nu gražinam salą</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/GU6Qx0Z3zxk')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/iQdrXcZyY18" title="Gimtadienis" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Šiandien mano gimtadienis</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/iQdrXcZyY18')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/G2q2gC0xnnE" title="Survival" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Stream Savaitė | Kaimux | 3 diena | Survival | Netrugdom tik..</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/G2q2gC0xnnE')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/OSLSNZZAwmo" title="BoxPVP" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Stream Savaitė | Kaimux | 2 diena | BoxPVP | Nepatinka boxas jau😖</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/OSLSNZZAwmo')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/YtwHw9X1ITc" title="Prison" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Stream Savaitė | Kaimux | 1 diena | Prison | Pilną sunkumų ten.......</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/YtwHw9X1ITc')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/5MCSfNiKcvs" title="EFT5HMP" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Kaip pasiekti viską per vieną kart?! | EFT5HMP.</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/5MCSfNiKcvs')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/ZPVp2mzGMEE" title="Ice Age PS4" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Ice age tutorial PS4</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/ZPVp2mzGMEE')">Žiūrėti visame lange</button>↩
-    </div>↩
-↩
-    <div class="video-card">↩
-      <iframe src="https://www.youtube.com/embed/qr9puiMdwI4" title="Stray Tutorial" frameborder="0" allowfullscreen></iframe>↩
-      <div class="video-title">Stray žaidimas VISAS | Tutorial</div>↩
-      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/qr9puiMdwI4')">Žiūrėti visame lange</button>↩
-    </div>↩
-  </div>↩
-↩
-  <div id="videoModal" class="modal">↩
-    <div class="modal-content">↩
-      <button class="close-btn" onclick="closeModal()">&times;</button>↩
-      <iframe id="modalVideo" src="" frameborder="0" allowfullscreen></iframe>↩
-    </div>↩
-  </div>↩
-↩
-  <footer>↩
-    &copy; 2025 Skrydis. YouTube skiltis.↩
-  </footer>↩
-↩
-  <script>↩
-    function openModal(videoUrl) {↩
-      document.getElementById("modalVideo").src = videoUrl + "?autoplay=1";↩
-      document.getElementById("videoModal").style.display = "flex";↩
-    }↩
-↩
-    function closeModal() {↩
-      document.getElementById("modalVideo").src = "";↩
-      document.getElementById("videoModal").style.display = "none";↩
-    }↩
-  </script>↩
-</body>↩
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #6a11cb, #2575fc);
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    nav {
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin: 0 10px;
+      padding: 10px 18px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #ddd;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+    }
+    .video-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .video-card iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 8px;
+    }
+    .video-title {
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    .watch-fullscreen-btn {
+      background-color: #ffffff33;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .watch-fullscreen-btn:hover {
+      background-color: #ffffff55;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+    }
+    .modal-content iframe {
+      width: 100%;
+      height: 500px;
+    }
+    .close-btn {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Pradžia</a>
+    <a href="naujienos.html">Naujienos</a>
+    <a href="info.html">Informacija</a>
+    <a href="komanda.html">Komanda</a>
+  </nav>
+
+<div class="video-grid">
+  <div class="video-card">
+    <iframe src="https://www.youtube.com/embed/CZCpEGY5Vjk" title="Minecraft išlikimas | 2 dalis" frameborder="0" allowfullscreen></iframe>
+    <div class="video-title">Minecraft išlikimas | 4 dalis | Kaimeliai</div>
+    <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/CZCpEGY5Vjk')">Žiūrėti visame lange</button>
+  </div>
+
+  <div class="video-card">
+    <iframe src="https://www.youtube.com/embed/oQPZsaJNSKM" title="Minecraft išlikimas | 3 dalis" frameborder="0" allowfullscreen></iframe>
+    <div class="video-title">Minecraft išlikimas | 3 dalis | Deimantai!</div>
+    <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/oQPZsaJNSKM')">Žiūrėti visame lange</button>
+  </div>
+
+  <div class="video-grid">
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/CZCpEGY5Vjk" title="Minecraft išlikimas | 2 dalis" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Minecraft išlikimas | 2 dalis | Turim ir ūkį😀</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/CZCpEGY5Vjk')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/XJ9UWG9Xiew" title="Minecraft išlikimas | 1 dalis" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Minecraft išlikimas | 1 dalis | Pati pirma pradžia 😎</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/XJ9UWG9Xiew')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/JgZX1NoHmJs" title="Stream Savaitė 5 diena" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Stream Savaitė | Kaimux | 5 diena | Creative | Va per /blueprints persikelsim</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/JgZX1NoHmJs')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/GU6Qx0Z3zxk" title="Skyblock" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Stream Savaitė | Kaimux | 4 diena | Skyblock | Nu gražinam salą</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/GU6Qx0Z3zxk')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/iQdrXcZyY18" title="Gimtadienis" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Šiandien mano gimtadienis</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/iQdrXcZyY18')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/G2q2gC0xnnE" title="Survival" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Stream Savaitė | Kaimux | 3 diena | Survival | Netrugdom tik..</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/G2q2gC0xnnE')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/OSLSNZZAwmo" title="BoxPVP" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Stream Savaitė | Kaimux | 2 diena | BoxPVP | Nepatinka boxas jau😖</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/OSLSNZZAwmo')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/YtwHw9X1ITc" title="Prison" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Stream Savaitė | Kaimux | 1 diena | Prison | Pilną sunkumų ten.......</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/YtwHw9X1ITc')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/5MCSfNiKcvs" title="EFT5HMP" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Kaip pasiekti viską per vieną kart?! | EFT5HMP.</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/5MCSfNiKcvs')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/ZPVp2mzGMEE" title="Ice Age PS4" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Ice age tutorial PS4</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/ZPVp2mzGMEE')">Žiūrėti visame lange</button>
+    </div>
+
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/qr9puiMdwI4" title="Stray Tutorial" frameborder="0" allowfullscreen></iframe>
+      <div class="video-title">Stray žaidimas VISAS | Tutorial</div>
+      <button class="watch-fullscreen-btn" onclick="openModal('https://www.youtube.com/embed/qr9puiMdwI4')">Žiūrėti visame lange</button>
+    </div>
+  </div>
+
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      <iframe id="modalVideo" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Skrydis. YouTube skiltis.
+  </footer>
+
+  <script>
+    function openModal(videoUrl) {
+      document.getElementById("modalVideo").src = videoUrl + "?autoplay=1";
+      document.getElementById("videoModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("modalVideo").src = "";
+      document.getElementById("videoModal").style.display = "none";
+    }
+  </script>
+</body>
 </html>
